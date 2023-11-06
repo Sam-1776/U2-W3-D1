@@ -15,25 +15,23 @@ class User {
   }
 }
 
-const Samuele = new User("Samuele", "Simeone", "22", "Taranto");
-console.log(Samuele);
 
 const person = [
-  new User("Piero", "Fanelli", "23", "Milano"),
-  new User("Alfonso", "Giggi", "34", "Roma"),
-  new User("Gianni", "Gianni", "56", "Bari"),
-  new User("Andrea", "Poti", "12", "Palermo"),
-  new User("Samuele", "Simeone", "22", "Taranto"),
-  new User("Chiara", "Chiari", "35", "Amsterdam"),
-  new User("Jenna", "Ortega", "21", "Los Angeles"),
-  new User("Annalisa", "Ru", "48", "Augusta"),
+  new User("Piero", "Fanelli", 23, "Milano"),
+  new User("Alfonso", "Giggi", 34, "Roma"),
+  new User("Gianni", "Gianni", 56, "Bari"),
+  new User("Andrea", "Poti", 12, "Palermo"),
+  new User("Samuele", "Simeone", 22, "Taranto"),
+  new User("Chiara", "Chiari", 35, "Amsterdam"),
+  new User("Jenna", "Ortega", 21, "Los Angeles"),
+  new User("Annalisa", "Ru", 48, "Augusta"),
 ];
 
-console.log(User.control(person[2], person[4]));
-console.log(User.control(person[0], person[1]));
-console.log(User.control(person[5], person[2]));
-console.log(User.control(person[6], person[4]));
-console.log(User.control(person[7], person[3]));
+User.control(person[2], person[4]);
+User.control(person[0], person[1]);
+User.control(person[5], person[2]);
+User.control(person[6], person[4]);
+User.control(person[7], person[3]);
 
 
 window.onload = () => {
