@@ -93,9 +93,9 @@ window.onload = () => {
     const div = document.createElement("div");
     div.classList.add("card");
     const h4 = document.createElement("h4");
-    h4.innerText = `${name}`;
+    h4.innerText = `${pet}`;
     const h5 = document.createElement("h5");
-    h5.innerText = `${pet}`;
+    h5.innerText = `${name}`;
     const infoPet = document.createElement("span");
     infoPet.innerText = `${species} - ${breed}`;
 
