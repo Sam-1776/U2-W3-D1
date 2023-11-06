@@ -38,19 +38,7 @@ window.onload = () => {
     const animali = [];
     let j = 0;
     let i = 0; 
-  const form = document.getElementById("Myform");
-  const main = document.querySelector("main");
-  form.onsubmit = function (e) {
-    e.preventDefault();
-    const petInput = document.querySelector("#petName");
-    const nameInput = document.querySelector("#ownername");
-    const speciesInput = document.querySelector("#species");
-    const breedInput = document.querySelector("#breed");
 
-    const pet = petInput.value;
-    const name = nameInput.value;
-    const species = speciesInput.value;
-    const breed = breedInput.value;
 
     class Pet {
         constructor(name, owner, species, breed) {
@@ -77,10 +65,30 @@ window.onload = () => {
             
         }
     }
+
+
+
+
+
+  const form = document.getElementById("Myform");
+  const main = document.querySelector("main");
+  form.onsubmit = function (e) {
+    e.preventDefault();
+    const petInput = document.querySelector("#petName");
+    const nameInput = document.querySelector("#ownername");
+    const speciesInput = document.querySelector("#species");
+    const breedInput = document.querySelector("#breed");
+
+    const pet = petInput.value;
+    const name = nameInput.value;
+    const species = speciesInput.value;
+    const breed = breedInput.value;
+
+   
     
     console.log(animali.push(new Pet(pet, name, species ,breed)));
     console.log(animali);
-    console.log(Pet.isSameOwner(animali[j], animali[i]));
+    Pet.isSameOwner(animali[j], animali[i]);
 
     const div = document.createElement("div");
     div.classList.add("card");
