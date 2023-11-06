@@ -39,6 +39,7 @@ console.log(User.control(person[7], person[3]));
 window.onload = () => {
     const animali = [];
     let j = 0;
+    let i = 0; 
   const form = document.getElementById("Myform");
   const main = document.querySelector("main");
   form.onsubmit = function (e) {
@@ -62,13 +63,26 @@ window.onload = () => {
         }
       
         static isSameOwner(x, y) {
-          return x.ownername === y.ownername;
+            if (animali.length > 1) {
+                for (i = 0; i < animali.length; i++) {
+                    for (j = 0; j < animali.length; j++) {   
+                        const element = animali[i].ownername;
+                        const newElement = animali[j].ownername; 
+                        if (element === newElement  && i != j) {
+                            console.log(true)
+                            console.log(i);
+                            console.log(j);
+                        }
+                    }
+                }
+            }
+            
         }
     }
-
-      
+    
     console.log(animali.push(new Pet(pet, name, species ,breed)));
     console.log(animali);
+    console.log(Pet.isSameOwner(animali[j], animali[i]));
 
     const div = document.createElement("div");
     div.classList.add("card");
