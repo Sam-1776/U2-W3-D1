@@ -38,6 +38,7 @@ console.log(User.control(person[7], person[3]));
 
 window.onload = () => {
     const animali = [];
+    let j = 0;
   const form = document.getElementById("Myform");
   const main = document.querySelector("main");
   form.onsubmit = function (e) {
@@ -63,19 +64,20 @@ window.onload = () => {
         static isSameOwner(x, y) {
           return x.ownername === y.ownername;
         }
-      }
+    }
 
       
     console.log(animali.push(new Pet(pet, name, species ,breed)));
     console.log(animali);
 
     const div = document.createElement("div");
+    div.classList.add("card");
     const h4 = document.createElement("h4");
     h4.innerText = `${name}`;
     const h5 = document.createElement("h5");
     h5.innerText = `${pet}`;
     const infoPet = document.createElement("span");
-    infoPet.innerText = `${species} ${breed}`;
+    infoPet.innerText = `${species} - ${breed}`;
 
     div.appendChild(h4);
     div.appendChild(h5);

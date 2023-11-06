@@ -1,0 +1,84 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: beige;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container #Myform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container #Myform input {
+  min-width: 400px;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  margin-bottom: 8px;
+}
+.container #Myform input::-moz-placeholder {
+  color: black;
+  opacity: 0.6;
+  font-weight: bold;
+}
+.container #Myform input::placeholder {
+  color: black;
+  opacity: 0.6;
+  font-weight: bold;
+}
+.container #Myform label {
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+.container #Myform button {
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.container #Myform button:hover {
+  background-color: lightslategrey;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+main .card {
+  background-color: black;
+  width: 22%;
+  color: white;
+  border-radius: 10px;
+  margin-inline: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .card h4 {
+  font-size: 2rem;
+  margin-block: 3px;
+}
+main .card h5 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+main .card span {
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+main .card:hover {
+  background-color: lightslategrey;
+}/*# sourceMappingURL=style.css.map */
